@@ -1,12 +1,10 @@
-body{
-    background-color: grey;
-}
-
 .menu{
     justify-content: space-between;
-    align-items: start;
-    text-align: center;
+    align-items: center;
     list-style: none;
-    background-color: aqua;
-    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

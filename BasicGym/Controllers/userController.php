@@ -5,7 +5,9 @@ require_once "Models/userModel.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if($uri == "/connexion"){
-    require_once "Views/Users/connexion.php";
+    $template = "Views/Users/connexion.php";
+    require_once  "Views/base.php";
 }elseif ($uri == "/insciptionOrEditProfile") {
-    require_once "Views/Users/insciptionOrEditProfile.php";
+    $template = "Views/Users/insciptionOrEditProfile.php";
+    require_once  "Views/base.php";
 }
