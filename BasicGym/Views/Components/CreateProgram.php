@@ -1,36 +1,50 @@
-<form method="post" action="">
-    <fieldset>
-        <legend>Créer votre Programme</legend>
-            <div>
-                <label>Poid</label>
-                <input type="text" placeholder="Poid en kg" id="Poid" name="Poid" required>
-            </div>
-            <div>
-                <label >Taille de chaussure</label>
-                <input type="text" placeholder="Taille de chaussure en cm" id="Poid" name="Poid" required>
-            </div>
-            <div>
-                <label >Votre taille</label>
-                <input type="text" placeholder="Taille en cm" id="Taille" name="Taille" required>
-            </div>
-            <div>
-                <label >Votre age</label>
-                <input type="text" placeholder="Age" id="Age" name="Age" required>
-            </div>
-            <div>
-                <label >Votre longeviter</label>
-                <input type="text" placeholder="Longeline en cm" id="Longeline" name="Longeline" required>
-            </div>
-            <div>
-                <label >Bonne nutrition</label>
-                <input type="text" placeholder="Nutrition" id="Nutrition" name="Nutrition" required>
-            </div>
-            <div>
-                <label >Horraire</label>
-                <input type="text" placeholder="Horraire" id="Horraire" name="Horraire" required>
-            </div>
-            <div>
-                <button name="btnEnvoi" type="submit" >Envoyer</button>
-            </div>
-    </fieldset>
-</form>
+<link rel="stylesheet" href="css/style.css">
+
+<div class="flex1">
+    <div>
+        <form method="post" action="" class="flex formCreate">
+            <fieldset>
+                        <legend>Créer votre Programme</legend>
+                        
+                            <label for="gender">Sexe:</label>
+                                <select id="gender" required>
+                                    <option value="male">Homme</option>
+                                    <option value="female">Femme</option>
+                                </select>
+
+                        <label for="age">Âge:</label>
+                        <input type="number" id="age" required>
+
+                    <div>
+                        <label for="height">Taille (en cm):</label>
+                        <input type="number" id="height" required>
+                    </div>
+
+                    <div>
+                        <label for="weight">Poids (en kg):</label>
+                        <input type="number" id="weight" required>
+                    </div>
+
+                    <div>
+                        <button name="btnEnvoi" type="submit" >Calculer l'IMC</button>
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form method="post" action="" >
+            <fieldset>
+                <div class="flex etoile">
+                    <img src="img/etoile.png" alt="etoile.png">
+                    <img src="img/etoile.png" alt="etoile.png">
+                    <img src="img/etoile.png" alt="etoile.png">
+                    <img src="img/etoile.png" alt="etoile.png">
+                    <img src="img/etoile.png" alt="etoile.png">
+                </div>
+                <div>
+                    <p>coucou vous allez bien</p>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -8,3 +8,22 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.formCreate {
+    justify-content: space-evenly;
+    height: 400px;
+    padding: auto;
+    margin: auto;
+}
+
+.formCreate input{
+    justify-content: space-evenly;
+    height: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.etoile{
+    width: 25px;
+    height: 25px;
+}
