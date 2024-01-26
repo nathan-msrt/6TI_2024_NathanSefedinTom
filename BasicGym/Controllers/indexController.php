@@ -1,7 +1,5 @@
 <?php
 
-require_once "Models/optionModel.php"; 
-
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri == "/index.php"  ||  $uri == "/") {
