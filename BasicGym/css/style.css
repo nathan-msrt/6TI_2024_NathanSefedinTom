@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.texteAccueilh1 {
+    text-align: center;
+    font-size: 170%; 
+    margin-right: 18%;
+    margin-left: 18%;
+    font-weight: 700; 
+    color: black; 
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.formCreate {
+    justify-content: space-evenly;
+    height: 400px;
+    padding: auto;
+    margin: auto;
+}
+
+.formCreate input{
+    justify-content: space-evenly;
+    height: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.etoile{
+    width: 25px;
+    height: 25px;
+}

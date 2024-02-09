@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexCut{
+    flex: 1;
+}
