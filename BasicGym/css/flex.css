@@ -10,3 +10,7 @@
 .flexCut{
     flex: 1;
 }
+
+.imageContainer {
+    position: relative;
+}

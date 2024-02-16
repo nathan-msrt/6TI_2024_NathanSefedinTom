@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="css/style.css">
-
+<div class="imageContainer">
+    <img src="img/dos.png" alt="dos.jpg" width="100%">
+    <h1 class="textOnImageTitre">CREER SON PROGRAMME</h1>
+</div>
 <div class="flex1">
     <div>
         <form method="post" action="" class="flex formCreate">

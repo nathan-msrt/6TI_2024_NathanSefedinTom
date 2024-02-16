@@ -1,4 +1,10 @@
-            <form method="post" action="">
+<div class="imageContainer">
+    <img src="img/dos.png" alt="dos.jpg" width="100%">
+    <h1 class="textOnImageTitre">PROGRAM GYM</h1>
+</div>    
+            
+            
+            <form method="post" action="" >
                 <fieldset>
                     <legend>Se connecter</legend>
                     <div>
