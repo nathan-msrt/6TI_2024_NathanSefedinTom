@@ -6,8 +6,8 @@
 <div class="flex1">
     <div>
         <form method="post" action="" class="flex formCreate">
-            <fieldset>
-                        <legend>Créer votre Programme</legend>
+            <fieldset class="formCreerProgramme">
+                        <legend>Rentrer vos données pour générer votre programme</legend>
                         
                             <label for="gender">Sexe:</label>
                                 <select id="gender" required>
@@ -34,20 +34,39 @@
             </fieldset>
         </form>
     </div>
-    <div>
-        <form method="post" action="" >
-            <fieldset>
-                <div class="flex etoile">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                </div>
-                <div>
-                    <p>coucou vous allez bien</p>
-                </div>
-            </fieldset>
-        </form>
+    <div class="flex etoile">
+        <div class="avis">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <h3>"Top site pour des programmes de musculation personnalisés! Facile à utiliser, exercices bien expliqués, variété de programmes. Recommandé!"</h3>
+        </div>
+        <div class="avis">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <h3>"Top site pour des programmes de musculation personnalisés! Facile à utiliser, exercices bien expliqués, variété de programmes. Recommandé!"</h3>
+        </div>
+        <div class="avis">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <h3>"Super outil! Programme d'entraînement sur mesure en quelques clics, vidéos et descriptions détaillées. Ressource exceptionnelle, merci!"</h3>
+        </div>
+        <div class="avis">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <img class="etoile" src="img/etoile.png" alt="etoile.png">
+            <h3>"Transforme la routine d'entraînement! Variété des programmes, conseils nutrition et récupération utiles. Ma référence pour la musculation, bravo!"</h3>
+        </div>
     </div>
-</div>
+
+  
