@@ -17,19 +17,17 @@ function CreateUser($pdo)
     }
 }
 
-function chercherUser($pdo){
+function connectUser($pdo){
     try {
-        $query = "select * from utilisateur where utilisateurPseudo=:utilisateurPseudo and utilisateurMotDePasse=:utilisateurMotDePasse";
+        $query = "select * from utilisateur where utilisateurEmail=:utilisateurEmail and utilisateurMotDePasse=:utilisateurMotDePasse";
         $chercheUser = $pdo->prepare($query);
         $chercheUser->execute([
-            'utilisateurPseudo' => $_POST['pseudo'],
-            'utilisateurMotDePasse' => $_POST['mot_de_passe'],
+            'utilisateurEmail' => $_POST['Login'],
+            'utilisateurMotDePasse' => $_POST['Password'],
         ]);
-        $user=$chercheUser -> fetch();
-        var_dump($_SESSION);
-        var_dump($user);
-        if ($user) {
-            $_SESSION['user']=$user;
+        $utilisateur=$chercheUser -> fetch();
+        if ($utilisateur) {
+            $_SESSION['utilisateur']=$utilisateur;
         }//else pour dirre qu'on a pas de pseudo ou mot de passe valide
     } catch (PDOException $e) {
         $message = $e->getMessage();
@@ -59,10 +57,10 @@ function UpdateUser($pdo)
 function DeleteUser($pdo)
 {
     try {
-        $query = "delete from utilisateur where id=: id";
+        $query = "delete from utilisateur where utilisateurId =:utilisateurId";
         $deleteUser = $pdo->prepare($query);
         $deleteUser->execute([
-            'id' => $_SESSION["user"] ->id
+            'utilisateurId' => $_SESSION["id"] ->utilisateurId
         ]);
     } catch (PDOException $e) {
         $message = $e->getMessage();

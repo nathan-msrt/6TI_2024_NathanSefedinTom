@@ -1,6 +1,10 @@
 <?php
 
 $uri = $_SERVER["REQUEST_URI"];
+// Vérifiez si l'utilisateur est connecté
+$isLoggedIn = isset($_SESSION['utilisateur']);
+$loginLink = $isLoggedIn ? "profil" : "connexion";
+$linkText = $isLoggedIn ? "Profil" : "Se connecter";
 
 if ($uri == "/index.php"  ||  $uri == "/") {
     $template = "Views/pageAccueil.php";
