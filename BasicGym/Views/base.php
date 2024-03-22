@@ -20,5 +20,7 @@
     <flooter>
         <?php require_once "Views/Components/footer.php"; ?>
     </flooter>
+
+    
 </body>
 </html>
