@@ -1,19 +1,18 @@
 <?php
 
-function CreateCritereUtilisateur($pdo)
+function RecupValeurBdd($pdo)
 {
     try {
-        if (isset ($_POST["btnEnvoi"])) {
-            $query = "insert into critereutilisateur (critereUtilisateurPoid, critereUtilisateurTaille, critereUtilisateurAge, critereUtilisateurSexe) values ( :critereUtilisateurPoid, :critereUtilisateurTaille, :critereUtilisateurAge, :critereUtilisateurSexe)";
+        
+            $query = "insert into critereutilisateur (critereUtilisateurPoid, critereUtilisateurTaille, critereUtilisateurAge, critereUtilisateurSexe, utilisateurId) values ( :critereUtilisateurPoid, :critereUtilisateurTaille, :critereUtilisateurAge, :critereUtilisateurSexe, :utilisateurId)";
             $ajouteUser = $pdo->prepare($query);
             $ajouteUser->execute([
                 'critereUtilisateurPoid'=> $_POST ['poid'],
                 'critereUtilisateurTaille'=>$_POST ['taille'],
                 'critereUtilisateurAge'=>$_POST ['age'],
                 'critereUtilisateurSexe'=>$_POST ['sexe'],
+                'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
             ]);
-            $_SESSION['critereutilisateur']=$ajouteUser;
-        }
     } catch (PDOException $e) {
         die($e -> getMessage());
     }
@@ -27,11 +26,11 @@ function selectLeCritere($pdo)
         
         $selectLeCritere = $pdo->prepare($query);
         $selectLeCritere->execute([
-            'utilisateurId' => $_SESSION['utilisateurId']
+            'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
         ]);
         $critere = $selectLeCritere->fetch();
+        var_dump($critere);
         $_SESSION['critereutilisateur']=$critere;
-        return $critere;
     } catch (PDOException $e) {
         $message = $e->getMessage();
         die($message);
