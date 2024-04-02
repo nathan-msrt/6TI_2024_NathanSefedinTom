@@ -5,5 +5,10 @@
     <li><a href="/"><img src="img/img.png" width="100px"></a></li> 
     <li><a href="CreateProgram">Créer son programe</a></li>
     <li><a href="OurProgram">Nos programmes</a></li>
-    <li><a href="<?php echo $loginLink ?>"><?php echo $linkText ?></a></li>
+    <?php if(isset($_SESSION["user"])): ?>
+            <a class="menu" class="menu" href="profil">Profil</a>
+           <!-- <a class="menu-a" href="chat">Chat</a>-->
+        <?php else : ?>
+            <a class="menu-a" href="connexion">Connection</a>
+        <?php endif ?>
 </div>

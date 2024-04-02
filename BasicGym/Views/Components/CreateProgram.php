@@ -34,7 +34,7 @@
             </fieldset>
         </form>
     </div>
-    <div class="flex etoile">
+    <div class="flex marginE etoile">
         <div class="avis">
             <img class="etoile" src="img/etoile.png" alt="etoile.png">
             <img class="etoile" src="img/etoile.png" alt="etoile.png">

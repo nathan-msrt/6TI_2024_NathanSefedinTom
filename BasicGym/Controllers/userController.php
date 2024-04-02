@@ -29,7 +29,7 @@ if($uri == "/connexion"){
     require_once  "Views/base.php";
 // Profil lien
 }elseif($uri == "/profil") {
-    require_once "Templates/users/profil.php";
+    require_once "../Views/Users/profil.php";
 }
 function verifData(){
     foreach($_POST as $key => $value) {
