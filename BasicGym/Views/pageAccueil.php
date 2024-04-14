@@ -1,8 +1,13 @@
 
-
-<div>
-    <img src="img/avant-apres.jpg" alt="avant-apres.jpg">
+<div >
+        <div class="divImgFond">
+            <img class="imgFond" src="img/FitnessVert.jpg" alt="FitnessVert.jpg">
+            <H1 class="divCompte">Votre compte</H1>
+            <h1 class="divCritere" >Vos critères</h1>
+        </div>
+    
 </div>
+
 <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
     <h1>Vos informations</h1>
         <div class="flex space-around">
@@ -29,3 +34,4 @@
         </div>
 
 <?php endif ?>
+
