@@ -1,4 +1,8 @@
 <?php
+
+require_once "../Controllers/userController.php";
+
+
 function CreateUser($pdo)
 {
     try {
