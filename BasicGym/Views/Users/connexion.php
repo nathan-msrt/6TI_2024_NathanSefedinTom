@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/flex.css">
 <link rel="stylesheet" href="css/style.css">
 <div class="flex5 divIntro">
     <div class="divGaucheIntro">
@@ -17,7 +18,7 @@
     <div>
         <img src="img/salle.jpg" class="imgFondIntro" alt="photoHaltereIntro">
     </div>
-    <div>
+    <div class="divAvisIntro">
         <H1 class="divAvis">Nos avis</H1>
         <div class="rating">
             <div class="stars">

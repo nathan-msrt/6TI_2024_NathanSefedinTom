@@ -4,18 +4,16 @@ require_once "Models/userModel.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri == "/index.php") {
-    var_dump("cou");
     var_dump($_POST);
     if(isset($_POST["btnEnvoi"])){
-        var_dump("coucou");
         $messageErrorLogin = verifData();
         if (!($messageErrorLogin)) {
             connectUser($pdo);
-            header('location:/pageAccueil.php');
+            header('location:/');
         }
     }
-    $template = "Views/Users/connexion.php";
-    require_once "Views/base.php";
+    
+    require_once "Views/Users/connexion.php";
 }elseif ($uri == "/CreateProgram"){
     $template = "Views/Components/CreateProgram.php";
     require_once  "Views/base.php";

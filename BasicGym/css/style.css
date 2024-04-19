@@ -86,31 +86,29 @@ body{
 .divCompte  {
     width:462px;
     height:500px;
-    padding: auto;
-    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-color:white;
-    position: absolute;
-    top: 250px;
-    left: 15%;
     border-radius: 50px;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .divCritere{
     width:462px;
     height:500px;
-    padding: auto;
-    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-color:white;
-    position: absolute;
-    top: 250px;
     border-radius: 50px;
     justify-content: space-between;
     font-size: 24px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divAvisIntro{
+    width: 50%;
 }
 .divAvis{
     position: relative;
@@ -159,6 +157,8 @@ body{
 }
 .divImgFond{
     width: 100%;
+    background-image: url("../img/fondImg\ \(2\).jpg");
+    background-repeat: no-repeat;
 }
 .input{
     border-radius: 50px;
