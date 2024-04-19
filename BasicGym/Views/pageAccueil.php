@@ -2,8 +2,8 @@
 <div >
         <div class="divImgFond">
             <img class="imgFond" src="img/FitnessVert.jpg" alt="FitnessVert.jpg">
-            <H1 class="divCompte">Votre compte</H1>
-            <h1 class="divCritere" >Vos critères</h1>
+            <H1 class="divCompte ">Votre compte</H1>
+            <h1 class="divCritere " >Vos critères</h1>
         </div>
     
 </div>

@@ -23,3 +23,7 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+.flex5{
+    display: flex;
+    justify-content: center;
+}
