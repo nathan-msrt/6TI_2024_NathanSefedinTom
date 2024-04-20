@@ -1,10 +1,8 @@
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/flex.css">
 
 <div class="navBar li flex1 a">
-    <img class="imgLogo" src="img/img.png" alt="imgLogo">
-    <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte--> <li><a href="CreateProgram">COMPTE</a></li> <?php endif ?>
-    <a href="OurProgram">ACCUEIL</a> <!-- changer les href des a-->
-    <a href="connexion">CREER PROGRAMME</a>
-    <a href="insciptionOrEditProfile">VOIR PROGRAMME</a>
+    <!--<img class="imgLogo" src="img/img.png" alt="imgLogo">-->
+    <a class="a"  href="/">ACCUEIL</a> <!-- changer les href des a-->
+    <a class="a"  href="CreateProgram">CREER PROGRAMME</a>
+    <a class="a"  href="OurProgram">VOIR PROGRAMME</a>
+    <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte--> <a class="a" href="CreateProgram">COMPTE</a> <?php endif ?>
 </div>

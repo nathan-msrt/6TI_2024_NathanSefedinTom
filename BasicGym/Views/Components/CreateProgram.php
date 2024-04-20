@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="css/style.css">
 
+<img class="imgFond" src="img/FitnessVert.jpg" alt="FitnessVert.jpg">
 <div class="flex1">
     <div>
+        
         <form method="post" action="" class="flex formCreate">
             <fieldset>
                         <legend>Créer votre Programme</legend>

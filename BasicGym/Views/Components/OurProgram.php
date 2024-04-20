@@ -1,7 +1,5 @@
+<img class="imgFond" src="img/FitnessVert.jpg" alt="FitnessVert.jpg">
 <div>
-        <div class="img">
-            <img src="img/FitnessVert.jpg" alt="FitnessVert.jpg">
-        </div>
     <div class="flex">
         <div class="divCompte">
             <H1>Votre compte</H1>
