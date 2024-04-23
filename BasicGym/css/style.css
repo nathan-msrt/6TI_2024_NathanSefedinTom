@@ -28,7 +28,7 @@ body{
     text-align: center;
     align-items: center;
     margin: 50px 0px 0px 0px;
-    background-color: #579730;
+    background-color: #7ea367;
     height: 30px;
     width: 250px ;
     padding-top: 2px;
@@ -40,7 +40,7 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .a:hover,.a:active{
-    background-color: #7ea367;
+    background-color: #579730;
 }
 .divIntro{
     width: 100%;
@@ -86,24 +86,31 @@ body{
 .divCompte  {
     width:462px;
     height:500px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: auto;
     background-color:white;
     border-radius: 50px;
-    justify-content: space-between;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .divCritere{
     width:462px;
     height:500px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: auto;
     background-color:white;
     border-radius: 50px;
-    justify-content: space-between;
-    font-size: 24px;
+    font-size: 15px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.divCreerProgram{
+    width:462px;
+    height:500px;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -157,8 +164,8 @@ body{
 }
 .divImgFond{
     width: 100%;
-    background-image: url("../img/fondImg\ \(2\).jpg");
-    background-repeat: no-repeat;
+    height: 750px;
+    background-color: #EEEEEE;
 }
 .input{
     border-radius: 50px;
@@ -169,6 +176,11 @@ body{
     list-style-type: none;
     background-color: white;
     color: black;
+}
+.form{
+    width: 462px;
+    height: 500px;
+    overflow: hidden;
 }
 .formCreate {
     justify-content: space-evenly;

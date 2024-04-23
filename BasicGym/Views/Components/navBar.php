@@ -1,5 +1,5 @@
 
-<div class="navBar li flex1 a">
+<div class="navBar li flex1 ">
     <!--<img class="imgLogo" src="img/img.png" alt="imgLogo">-->
     <a class="a"  href="/">ACCUEIL</a> <!-- changer les href des a-->
     <a class="a"  href="CreateProgram">CREER PROGRAMME</a>

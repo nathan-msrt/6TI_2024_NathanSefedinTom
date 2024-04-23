@@ -5,10 +5,9 @@
     </div>
     <div class="divCritere">
         <h1>Vos critères</h1>
-            <div class="">
-                <form action="">
-                    <fieldset>
-                        <div>
+            <div >
+                <form action="" class="form">
+                    <fieldset >
                                         <ol>
                                             <div>
                                                 <li>Poid</li>
@@ -27,7 +26,6 @@
                                                 <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurSexe ?></p>
                                             </div>
                                         </ol>
-                        </div>
                     </fieldset>
                 </form>            
             </div>
