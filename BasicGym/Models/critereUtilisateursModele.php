@@ -27,6 +27,7 @@ function selectLeCritere($pdo)
         $selectLeCritere = $pdo->prepare($query);
         $selectLeCritere->execute([
             'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
+            
         ]);
         $critere = $selectLeCritere->fetch();
         var_dump($critere);
@@ -36,3 +37,4 @@ function selectLeCritere($pdo)
         die($message);
     }
 }
+
