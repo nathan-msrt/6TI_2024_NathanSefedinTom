@@ -14,7 +14,7 @@
                     </div>
                     <div>
                         <li>Taille</li>
-                        <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurTaille ?></p>
+                        <p><?= $_SESSION['critereutilisateur']->critereUtilisateurTaille ?></p>
                     </div>
                     <div>
                         <li>Age</li>

@@ -5,7 +5,6 @@ require_once "Models/critereUtilisateursModele.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri == "/") {
-    RecupValeurBdd($pdo);
     selectLeCritereprUser($pdo);
     $template = "Views/pageAccueil.php";
     require_once  "Views/base.php";
