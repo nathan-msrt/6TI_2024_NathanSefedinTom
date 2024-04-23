@@ -28,6 +28,8 @@ if($uri == "/connexion"){
         header("location:/pageAccueil.php");
     }
     require_once "Views/Users/inscriptionOrEditProfile.php";
+}elseif ($uri === "/compte") {
+    require_once "Views/Users/compte.php";
 }
 
 

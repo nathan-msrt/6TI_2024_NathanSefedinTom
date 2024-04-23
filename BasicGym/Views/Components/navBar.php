@@ -7,4 +7,5 @@
     <li><a href="OurProgram">Nos programmes</a></li>
     <li><a href="connexion">Se connecter</a></li>
     <li><a href="insciptionOrEditProfile">S'inscrire</a></li>
+    <li><a href="compte">Compte</a></li>
 </div>

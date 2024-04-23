@@ -85,3 +85,22 @@ function reloadSession($pdo)
         die($message);
     }
 }
+
+function selectUser($pdo)
+{
+    
+    try {
+        
+        $query = "select * from utilisateur where utilisateurId = :utilisateurId";
+        
+        $selectUser = $pdo->prepare($query);
+        $selectUser->execute([
+            'utilisateurId' => $_SESSION['utilisateurId']
+        ]);
+        $user = $selectUser->fetch();
+        return $user;
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
