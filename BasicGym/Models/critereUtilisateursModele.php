@@ -18,7 +18,7 @@ function RecupValeurBdd($pdo)
     }
 }
 
-function selectLeCritere($pdo)
+function selectLeCritereprUser($pdo)
 { 
     try {
         
@@ -27,14 +27,11 @@ function selectLeCritere($pdo)
         $selectLeCritere = $pdo->prepare($query);
         $selectLeCritere->execute([
             'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
-            
         ]);
         $critere = $selectLeCritere->fetch();
-        var_dump($critere);
         $_SESSION['critereutilisateur']=$critere;
     } catch (PDOException $e) {
         $message = $e->getMessage();
         die($message);
     }
 }
-

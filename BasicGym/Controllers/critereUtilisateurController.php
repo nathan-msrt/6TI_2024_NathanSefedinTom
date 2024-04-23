@@ -6,6 +6,7 @@ $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri === "/CreateProgram") {
     if (isset ($_POST["btnEnvoi"])) {
+        var_dump($_POST);
         RecupValeurBdd($pdo);
         selectLeCritere($pdo);
     }
