@@ -42,26 +42,14 @@ body{
 .a:hover,.a:active{
     background-color: #579730;
 }
-.divIntro{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: 1000px
-}
-.divDroiteIntro{
-    width: 50%;
-    height: 100%;
-}
 .divGaucheIntro{
     width: 50%;
-    height: 100%;
-    position: relative;
-    top: 100%;
+    height: 1000px;
     background-color: white;
 }
 .divLoginIntro{
     display: block;
-    height: 50%;
+    height: 100%;
     align-items: center;
     text-align: center;
 }
@@ -70,18 +58,14 @@ body{
     height: 38px;
     
 }
-.divTitreIntro{
-    align-items: center;
-    height: 50%;
-}
 .imgTitre{
     flex-wrap: wrap;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 550px;
+    width: 650px;
     position: relative;
-    top:15%;
+    top: 15%;
 }
 .divCompte  {
     width:462px;
@@ -118,19 +102,12 @@ body{
     width: 50%;
 }
 .divAvis{
-    position: relative;
-    bottom: 625px;
-    left: 380px;
     width:462px;
     height:500px;
-    padding: auto;
     margin: auto;
     background-color:white;
-    
-    right: 15%;
     border-radius: 50px;
-    justify-content: space-between;
-    font-size: 24px;
+    font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -141,21 +118,6 @@ body{
     align-items: center;
     padding-top: 10px;
 }
-.imgLogin{
-    top: 10%;
-    height: 55px;
-    width: 150px;
-    align-items: center;
-    padding-top: 10px;
-    
-}
-.imgFond{
-    top: 10%;
-    filter: opacity(80%);
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
 .imgFondIntro{
     top: 10%;
     width: 100%;
@@ -164,8 +126,12 @@ body{
 }
 .divImgFond{
     width: 100%;
-    height: 750px;
+    height: 100%;
     background-color: #EEEEEE;
+}
+.divImgFond2{
+    background-image: url('/img/salle.jpg');
+    background-repeat: no-repeat;
 }
 .input{
     border-radius: 50px;

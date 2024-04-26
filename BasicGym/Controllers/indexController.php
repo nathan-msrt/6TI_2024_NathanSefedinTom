@@ -4,7 +4,6 @@ require_once "Models/userModel.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri == "/index.php") {
-    var_dump($_POST);
     if(isset($_POST["btnEnvoi"])){
         $messageErrorLogin = verifData();
         if (!($messageErrorLogin)) {
@@ -12,8 +11,8 @@ if ($uri == "/index.php") {
             header('location:/');
         }
     }
-    
-    require_once "Views/Users/connexion.php";
+    $template = "Views/Users/connexion.php";
+    require_once "Views/base.php";
 }elseif ($uri == "/CreateProgram"){
     $template = "Views/Components/CreateProgram.php";
     require_once  "Views/base.php";

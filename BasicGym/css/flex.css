@@ -26,4 +26,10 @@
 .flex5{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.flex6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

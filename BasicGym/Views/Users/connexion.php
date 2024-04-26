@@ -1,34 +1,31 @@
-<link rel="stylesheet" href="css/flex.css">
-<link rel="stylesheet" href="css/style.css">
-<div class="flex5 divIntro">
-    <div class="divGaucheIntro">
-        <div class="divTitreIntro">
-            <img class="imgTitre" src="img/Untitled.png" alt="photoTitre">
-        </div>
+
+<div class="flex5 divImgFond2">
+    <div class="divGaucheIntro flex6">
         <form action="" method="post">
             <div class="divLoginIntro">
+                <div class="espace"> <img src="img/Untitled.png" alt=""class="imgTitre"></div>
                 <div class="espace"><img src="img/LOGIN.png" alt="imgLogin" class="imgLogin"></div>
-                <div class="espace"><input class="input" placeholder="Introduisez votre email@gmail.com" type="email" id="email" name="Email" s required /></div>
+                <div class="espace"><input class="input" placeholder="Introduisez votre email@gmail.com" type="email" id="email" name="Email"  required /></div>
                 <div class="espace"><input class="input" placeholder="Introduisez votre mot de passe" type="password" id="pass" name="Password" required /></div>
                 <div><button name="btnEnvoi" type="submit" value="envoyer">Envoyer</button> </div>
                 <div class="espace"><a class="linkLogin" href="Views/Users/insciptionOrEditProfile.php">Pas encore inscrit ? Cliquez ici !</a></div>
             </div>
         </form>
     </div>
-    <div>
-        <img src="img/salle.jpg" class="imgFondIntro" alt="photoHaltereIntro">
-    </div>
     <div class="divAvisIntro">
-        <H1 class="divAvis">Nos avis</H1>
-        <div class="rating">
-            <div class="stars">
-                <i class="fa fa-star gold"></i>
-                <i class="fa fa-star gold"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <div class="divAvis">
+            <H1 >Nos avis</H1>
+            <div class="rating">
+                <div class="stars">
+                    <i class="fa fa-star gold"></i>
+                    <i class="fa fa-star gold"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="">Voir les avis.</a>
             </div>
-            <a href="#">Voir les avis.</a>
         </div>
     </div>
+
 </div>
