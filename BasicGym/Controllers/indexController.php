@@ -4,8 +4,10 @@ require_once "Models/critereUtilisateursModele.php";
 
 $uri = $_SERVER["REQUEST_URI"];
 
-if ($uri == "/") {
-    selectLeCritereprUser($pdo);
+if ($uri == "/")     {
+    if(isset($_SESSION['utilisateur'])) {
+        selectLeCritereprUser($pdo);
+    }   
     $template = "Views/pageAccueil.php";
     require_once  "Views/base.php";
 }elseif ($uri == "/CreateProgram"){

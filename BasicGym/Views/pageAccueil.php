@@ -1,8 +1,3 @@
-
-
-<div>
-    <img src="img/avant-apres.jpg" alt="avant-apres.jpg">
-</div>
 <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
     <h1>Vos informations</h1>
         <div class="flex space-around">
@@ -27,5 +22,4 @@
                 </ol>
             </div>
         </div>
-
 <?php endif ?>

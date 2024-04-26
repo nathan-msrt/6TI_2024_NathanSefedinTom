@@ -35,3 +35,17 @@ function selectLeCritereprUser($pdo)
         die($message);
     }
 }
+
+function DeleteCritereUser($pdo)
+{
+    try {
+        $query = 'delete from critereutilisateur where utilisateurId = :utilisateurId';
+        $delete2 = $pdo->prepare($query);
+        $delete2->execute([
+            'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
+        ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}

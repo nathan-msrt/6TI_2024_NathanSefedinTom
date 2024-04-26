@@ -11,18 +11,9 @@
             <input type="Password" placeholder="Password" class="form-control" id="Password" name="Password" required>
         </div>
         <div>
-            <button name="btnEnvoi" type="submit" value="envoyer">Envoyer</button>
+            <button name="btnEnvoiConnect" type="submit" value="envoyer">Envoyer</button>
         </div>
     
-        <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
-            <div>
-                <h3 name="btnEnvoi" class="text-danger"><a href="/deleteProfil" class="btn btn-secondary" name="id">supprimer ton profil ?</a></h3>
-            </div>
-        <?php endif ?>
-        <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
-            <div>
-                <h3 name="btnEnvoi" class="text-danger"><a href="/modifyProfil">Modifier votre profil ?</a></h3>
-            </div>
-        <?php endif ?>           
+               
     </fieldset>
 </form>

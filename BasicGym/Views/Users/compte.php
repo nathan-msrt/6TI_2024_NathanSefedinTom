@@ -20,18 +20,21 @@
             </div>
         </ol>
     </div>
-    <div >
-        <div class="flex">
-            <div class="marge">
-                <h3 class="text-danger">modifier ton profil ?</h3>
-                <a href="/modifyProfil" class="btn btn-secondary">Clique</a>
-            </div>
-            <div class="marge">
-                <h3 class="text-danger">supprimer ton profil ?</h3>
-                <a href="/deleteProfil" class="btn btn-secondary">Clique</a>
-            </div>
-        </div>
-    </div>
-    
-    
+    <div class="flex">
+        <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
+                <div>
+                    <h3 name="btnEnvoi" class="text-danger"><a href="/deleteProfil" class="btn btn-secondary" name="id">supprimer ton profil ?</a></h3>
+                </div>
+            <?php endif ?>
+            <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
+                <div>
+                    <h3 name="btnEnvoi" class="text-danger"><a href="/Deconnexion" class="btn btn-secondary" name="id">Se deconnecter de ton profil ?</a></h3>
+                </div>
+            <?php endif ?>
+            <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
+                <div>
+                    <h3 name="btnEnvoi" class="text-danger"><a href="/modifyProfil">Modifier votre profil ?</a></h3>
+                </div>
+            <?php endif ?>  
+    </div>   
 </div>

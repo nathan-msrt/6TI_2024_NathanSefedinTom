@@ -42,7 +42,7 @@ function DeleteUser($pdo)
         $query = "delete from utilisateur where utilisateurId =:utilisateurId";
         $deleteUser = $pdo->prepare($query);
         $deleteUser->execute([
-            'utilisateurId' => $_SESSION["id"] ->utilisateurId
+            'utilisateurId' => $_SESSION["utilisateur"] ->utilisateurId
         ]);
     } catch (PDOException $e) {
         $message = $e->getMessage();
@@ -74,11 +74,11 @@ function reloadSession($pdo)
         $query = "select * from utilisateur where utilisateurId = :utilisateurId";
         $chercheUser = $pdo->prepare($query);
         $chercheUser->execute([
-            'utilisateurId' => $_SESSION["id"] ->utilisateurId
+            'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
         ]);
         $user=$chercheUser -> fetch();
         if ($user) {
-            $_SESSION['id']=$utilisateurId;
+            $_SESSION['utilisateur']->utilisateurId;
         }
     } catch (PDOException $e) {
         $message = $e->getMessage();
