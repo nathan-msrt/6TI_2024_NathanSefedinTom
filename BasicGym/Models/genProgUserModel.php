@@ -46,17 +46,61 @@ function ImcProg(){
 
 }
 
+
 function ChoixProg(){
+    $programmeUser1 = "";
+    $programmeUser2 = "";
 
     $imc = $_SESSION["critereutilisateur"]->critereUtilisateurImc;
+    $materielMusculation = $_SESSION["critereutilisateur"]->critereUtilisateurMaterielMusculation;
     if ($imc < 18.5) {
-            echo "<p>Vous êtes en insuffisance pondérale.</p>";
+            //  echo "<p>Vous êtes en insuffisance pondérale.</p>";
+            // si l'utilisateur possède du matos de muscu
+            if ($materielMusculation == true) {
+                $programmeUser2 = "programmemusculation";
+            }else{
+            // si l'utilisateur ne possède pas de matos de muscu
+                $programmeUser2 = "programmepoiddecorp";
+            }
         } elseif ($imc >= 18.5 && $imc < 24.9) {
-            echo "<p>Votre poids est normal.</p>";
+            //  echo "<p>Votre poids est normal.</p>";
+            $programmeUser1 = "programmecardio";
+            // si l'utilisateur possède du matos de muscu
+            if ($materielMusculation == true) {
+                $programmeUser2 = "programmemusculation";
+            }else{
+                $programmeUser2 = "programmepoiddecorp";
+            }
         } elseif ($imc >= 25 && $imc < 29.9) {
-            echo "<p>Vous êtes en surpoids.</p>";
+            $programmeUser1 = "programmecardio";
         } else {
             echo "<p>Vous êtes en obésité. Consultez un professionnel de la santé.</p>";
         }
-    }
+    
+    // programme -> sportif -> sportifUser
 
+    try {
+        if ($materielMusculation == true) {
+            $query = "INSERT INTO programmeSportif (programmePoidDeCorpId, programmeMusculationId, programmeCardioId) values (:programmePoidDeCorpId, :programmeMusculationId, :programmeCardioId)";
+            $ajouteProgramme = $pdo->prepare($query);
+            $ajoute->execute([
+                'programmeMusculationId'=> $_POST [$programmeUser2],
+                'programmeCardioId'=>$_POST [$programmeUser1],
+            ]);
+        }else{
+            // si l'utilisateur ne possède pas de matos de muscu
+            $query = "INSERT INTO programmeSportif (programmePoidDeCorpId, programmeMusculationId, programmeCardioId) values (:programmePoidDeCorpId, :programmeMusculationId, :programmeCardioId)";
+            $ajouteProgramme = $pdo->prepare($query);
+            $ajoute->execute([
+                'programmePoidDeCorpId'=> $_POST [$programmeUser2],
+                'programmeCardioId'=>$_POST [$programmeUser1],
+            ]);
+    }
+        $ajouteUser = $pdo->prepare($query);
+        $ajouteUser->execute([
+            'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
+        ]);
+} catch (PDOException $e) {
+    die($e -> getMessage());
+}
+}

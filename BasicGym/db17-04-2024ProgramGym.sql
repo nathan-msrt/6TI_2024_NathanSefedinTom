@@ -55,7 +55,10 @@ CREATE TABLE critereUtilisateur
     critereUtilisateurTaille int,
     critereUtilisateurAge int,
     critereUtilisateurNutrition bool,
-    critereUtilisateurSexe bool
+    critereUtilisateurSexe bool,
+    critereUtilisateurImc int,
+    critereUtilisateurMaterielMusculation bool,
+    utilisateurId int REFERENCES utilisateur(utilisateurId)
 );
 CREATE TABLE Utilisateur
 (
@@ -83,7 +86,7 @@ DELIMITER $$
 CREATE PROCEDURE InsertData()
 BEGIN
   DECLARE i INT DEFAULT 1;
-  WHILE i <= 1000 DO
+  WHILE i <= 200 DO
     INSERT INTO programmePoidDeCorp (corpPompe, corpTraction, corpSquat, corpAbdos, nbReps, nbSeries)
     VALUES (CONCAT('Pompes classiques ', i), CONCAT('Tractions supination ', i), CONCAT('Squats classiques ', i), CONCAT('Crunchs ', i), i, i);
 

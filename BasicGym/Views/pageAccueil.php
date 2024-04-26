@@ -10,21 +10,39 @@
                     <fieldset>
                         <div>
                                         <ol>
+                                        <?php
+                                            if (isset($_SESSION["critereutilisateur"])) {
+                                                $critere = $_SESSION["critereutilisateur"];}
+                                                if (isset($_SESSION["critereutilisateur"])) {
+                                                    $critere = $_SESSION["critereutilisateur"];
+                                                    // Accéder aux informations de l'utilisateur
+                                                    $poids = $critere->utilisateurPoid;
+                                                    $taille = isset($critere->critereUtilisateurTaille) ? $critere->critereUtilisateurTaille : 'N/A';
+                                                    $age = isset($critere->critereUtilisateurAge) ? $critere->critereUtilisateurAge : 'N/A';
+                                                    $sexe = isset($critere->critereUtilisateurSexe) ? ($critere->critereUtilisateurSexe ? 'Homme' : 'Femme') : 'N/A';
+                                                } else {
+                                                    // La clé $_SESSION["critereutilisateur"] n'est pas définie
+                                                    $poids = 'N/A';
+                                                    $taille = 'N/A';
+                                                    $age = 'N/A';
+                                                    $sexe = 'N/A';
+                                                }
+                                            ?>
                                             <div>
-                                                <li>Poid</li>
-                                                <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurPoid ?></p> <!--afficher une coordonnée dans la base de donnée-->
+                                                <li>Poids</li>
+                                                <p><?= $poids ?></p>
                                             </div>
                                             <div>
                                                 <li>Taille</li>
-                                                <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurTaille ?></p>
+                                                <p><?= $taille ?></p>
                                             </div>
                                             <div>
                                                 <li>Age</li>
-                                                <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurAge ?></p>
+                                                <p><?= $age ?></p>
                                             </div>
                                             <div>
                                                 <li>Sexe</li>
-                                                <p><?= $_SESSION["critereutilisateur"]->critereUtilisateurSexe ?></p>
+                                                <p><?= $sexe ?></p>
                                             </div>
                                         </ol>
                         </div>
