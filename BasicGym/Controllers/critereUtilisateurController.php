@@ -5,18 +5,27 @@ require_once "Models/critereUtilisateursModele.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri === "/CreateProgram") {
-    if (isset ($_POST["btnEnvoi"])) {
+    if (isset ($_POST["btnEnvoiImc"])) {
         RecupValeurBdd($pdo);
-        selectLeCritere($pdo);
+        selectLeCritereprUser($pdo);
     }
     $template = "Views/Components/pageAccueil.php";
     require_once  "Views/base.php";
 }
 
 elseif (str_contains($uri,"/pageAccueil.php")) {
-    var_dump($_SESSION["critereutilisateur"]);
-    selectLeCritere($pdo); //combattant pour recup un combattant afin de le voir lui seul
+    if(isset($_SESSION['utilisateur'])) {
+        selectLeCritereprUser($pdo);
+    }   
     IMC();
     $template = "Views/pageAccueil.php";
+    require_once  "Views/base.php";
+}
+
+elseif ($uri === "/OurProgram") {
+    if(isset($_SESSION['utilisateur'])) {
+        selectLeCritereprUser($pdo);
+    }   
+    $template = "Views/OurProgram.php";
     require_once  "Views/base.php";
 }

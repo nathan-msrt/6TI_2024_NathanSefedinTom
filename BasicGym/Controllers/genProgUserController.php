@@ -6,7 +6,7 @@ require_once "Models/genProgUserModel.php.php";
 $uri = $_SERVER["REQUEST_URI"];
 
 if ($uri === "/CreateProgram") {
-    if (isset ($_POST["btnEnvoi"])) {
+    if (isset ($_POST["btnEnvoiGen"])) {
         RecupValeurBdd($pdo);
         selectLeCritere($pdo);
     }

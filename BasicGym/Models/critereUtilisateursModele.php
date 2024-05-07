@@ -18,7 +18,7 @@ function RecupValeurBdd($pdo)
     }
 }
 
-function selectLeCritere($pdo)
+function selectLeCritereprUser($pdo)
 { 
     try {
         
@@ -27,10 +27,8 @@ function selectLeCritere($pdo)
         $selectLeCritere = $pdo->prepare($query);
         $selectLeCritere->execute([
             'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
-            
         ]);
         $critere = $selectLeCritere->fetch();
-        var_dump($critere);
         $_SESSION['critereutilisateur']=$critere;
     } catch (PDOException $e) {
         $message = $e->getMessage();
@@ -38,3 +36,16 @@ function selectLeCritere($pdo)
     }
 }
 
+function DeleteCritereUser($pdo)
+{
+    try {
+        $query = 'delete from critereutilisateur where utilisateurId = :utilisateurId';
+        $delete2 = $pdo->prepare($query);
+        $delete2->execute([
+            'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
+        ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
