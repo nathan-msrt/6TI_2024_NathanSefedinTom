@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="css/style.css">
 
 <div class="flex1">
+<div class="divImgFond flex1">
+<div class="flex1 divCreerProgram">
     <div>
         <form method="post" action="" class="flex formCreate">
             <fieldset>
@@ -27,20 +29,5 @@
             </fieldset>
         </form>
     </div>
-    <div>
-        <form method="post" action="" >
-            <fieldset>
-                <div class="flex etoile">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                    <img src="img/etoile.png" alt="etoile.png">
-                </div>
-                <div>
-                    <p>coucou vous allez bien</p>
-                </div>
-            </fieldset>
-        </form>
-    </div>
+</div>
 </div>

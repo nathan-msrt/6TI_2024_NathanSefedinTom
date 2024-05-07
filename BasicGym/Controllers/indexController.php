@@ -10,6 +10,16 @@ if ($uri == "/")     {
     }   
     $template = "Views/pageAccueil.php";
     require_once  "Views/base.php";
+if ($uri == "/index.php") {
+    if(isset($_POST["btnEnvoi"])){
+        $messageErrorLogin = verifData();
+        if (!($messageErrorLogin)) {
+            connectUser($pdo);
+            header('location:/');
+        }
+    }
+    $template = "Views/Users/connexion.php";
+    require_once "Views/base.php";
 }elseif ($uri == "/CreateProgram"){
     $template = "Views/Components/CreateProgram.php";
     require_once  "Views/base.php";
