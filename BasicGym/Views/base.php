@@ -10,15 +10,19 @@
 </head>
 <body>
 
-    <header> 
-        <?php  require_once "Views/Components/navBar.php"; ?>
-    </header>
+    <?php if(isset($_SESSION["utilisateur"])) :?>
+        <header> 
+            <?php  require_once "Views/Components/navBar.php";?>
+        </header>
+        <?php endif ?>
     <main>
         <?php require_once $template;?>
     </main>
+    <?php if(isset($_SESSION["utilisateur"])) :?>
     <footer>
         <?php require_once "Views/Components/footer.php"; ?>
     </footer>
+    <?php endif ?>
 
     
 </body>

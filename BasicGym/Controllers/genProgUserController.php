@@ -1,7 +1,7 @@
 btnEnvoi
 <?php
 
-require_once "Models/genProgUserModel.php.php";
+require_once "Models/genProgUserModel.php";
 
 $uri = $_SERVER["REQUEST_URI"];
 

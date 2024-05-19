@@ -35,24 +35,6 @@ function connectUser($pdo){
     }
 }
 
-function UpdateUser($pdo)
-{
-    try {
-        if (isset ($_POST["btnEnvoi"])) {
-            $query = "update utilisateur set utilisateurNom=:utilisateurNom , utilisateurPrenom=:utilisateurPrenom, utilisateurPseudo=:utilisateurPseudo, utilisateurEmail=:utilisateurEmail,  utilisateurMotDePasse=:utilisateurMotDePasse where id=:id";
-            $ajouteUser = $pdo->prepare($query);
-            $ajouteUser->execute([
-                'utilisateurNom'=> $_POST ['nom'],
-                'utilisateurPrenom'=>$_POST ['prenom'],
-                'utilisateurPseudo'=>$_POST ['pseudo'],
-                'utilisateurMotDePasse'=>$_POST ['mot_de_passe'],
-                'utilisateurEmail'=>$_POST ['email']
-            ]);
-        }
-    } catch (PDOException $e) {
-        die($e -> getMessage());
-    }
-}
 
 function DeleteUser($pdo)
 {
@@ -60,8 +42,63 @@ function DeleteUser($pdo)
         $query = "delete from utilisateur where utilisateurId =:utilisateurId";
         $deleteUser = $pdo->prepare($query);
         $deleteUser->execute([
-            'utilisateurId' => $_SESSION["id"] ->utilisateurId
+            'utilisateurId' => $_SESSION["utilisateur"] ->utilisateurId
         ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
+function UpdateUser($pdo)
+{
+    try {
+        if (isset ($_POST["btnEnvoi"])) {
+            $query = "update utilisateur set utilisateurNom=:utilisateurNom , utilisateurPrenom=:utilisateurPrenom, utilisateurEmail=:utilisateurEmail,  utilisateurMotDePasse=:utilisateurMotDePasse where utilisateurId=:utilisateurId";
+            $ajouteUser = $pdo->prepare($query);
+            $ajouteUser->execute([
+                'utilisateurNom'=> $_POST ['Nom'],
+                'utilisateurPrenom'=>$_POST ['Prenom'],
+                'utilisateurMotDePasse'=>$_POST ['Login'],
+                'utilisateurEmail'=>$_POST ['Email'],
+                'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
+            ]);
+        }
+    } catch (PDOException $e) {
+        die($e -> getMessage());
+    }
+}
+function reloadSession($pdo)
+{
+    try {
+        $query = "select * from utilisateur where utilisateurId = :utilisateurId";
+        $chercheUser = $pdo->prepare($query);
+        $chercheUser->execute([
+            'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
+        ]);
+        $user=$chercheUser -> fetch();
+        if ($user) {
+            $_SESSION['utilisateur']->utilisateurId;
+        }
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
+function selectUser($pdo)
+{
+    
+    try {
+        
+        $query = "select * from utilisateur where utilisateurId = :utilisateurId";
+        
+        $selectUser = $pdo->prepare($query);
+        $selectUser->execute([
+            'utilisateurId' => $_SESSION['utilisateurId']
+        ]);
+        $user = $selectUser->fetch();
+        return $user;
     } catch (PDOException $e) {
         $message = $e->getMessage();
         die($message);
