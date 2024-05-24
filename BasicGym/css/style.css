@@ -12,6 +12,9 @@
     font-weight: bold;
     font-size: 15px;
 }
+main{
+    height: 800px;
+}
 h1{
     text-align: center;
     height: 24px;
@@ -38,6 +41,7 @@ body{
     align-items: center;
     font-size: 22px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .a:hover,.a:active{
     background-color: #579730;
@@ -46,12 +50,14 @@ body{
     width: 50%;
     height: 1000px;
     background-color: white;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .divLoginIntro{
     display: block;
     height: 100%;
     align-items: center;
     text-align: center;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .divLoginIntro input{
     width: 360px;
@@ -76,6 +82,7 @@ body{
     font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .divCritere{
     width:462px;
@@ -86,6 +93,7 @@ body{
     font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
 .divCreerProgram{
@@ -97,9 +105,11 @@ body{
     font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .divAvisIntro{
     width: 50%;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 }
 .divAvis{
     width:462px;
@@ -110,6 +120,7 @@ body{
     font-size: 15px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
 
 }
 .imgLogo{
@@ -148,11 +159,34 @@ body{
     height: 500px;
     overflow: hidden;
 }
+fieldset{
+    border: none;
+    padding: 10px;
+    flex-flow: column;
+    display: flex;
+    
+}
+fieldset div{
+  flex-flow: column;
+  margin: 20px;
+}
+legend{
+    font-size: x-large;
+}
+fieldset input{
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 5px;
+}
 .formCreate {
     justify-content: space-evenly;
     height: 400px;
-    padding: auto;
+    padding: 50px;
     margin: auto;
+    border-width: 0px;
+    font-size: large;
 }
 
 .formCreate input{
@@ -160,7 +194,26 @@ body{
     height: 25px;
     padding: 0px;
     margin: 0px;
-    gap: 10px;
+}
+.formCreate button{
+    background: #7ea367;
+  opacity: 0.6;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  text-transform :uppercase ;
+  color:white;
+  cursor: pointer;
+  outline :none;
+  border-radius: 50px;
+  border: none;
+  padding :0;
+  margin-top :20px;
+  transition : opacity 0.5s ease;
+  
+}
+.button:hover,.button:active{
+    background-color: #579730;
 }
 
 
