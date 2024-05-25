@@ -3,7 +3,7 @@
 <div class="flex1 divCreerProgram">
     <div>
         <form method="post" action="" class="flex formCreate">
-            <fieldset>
+            <fieldset class="fieldsetIMC">
                         <legend>Créer votre Programme</legend>
                         
                             <div>

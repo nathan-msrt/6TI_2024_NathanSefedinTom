@@ -6,7 +6,7 @@
     <div class="divCritere">
         <h1>Vos critères</h1>
             <div >
-                <form action="" class="form">
+                <form action="" class="formCreate">
                     <fieldset >
                                         <ol>
                                             <div>
