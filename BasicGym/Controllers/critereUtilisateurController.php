@@ -16,6 +16,15 @@ if ($uri === "/CreateProgram") {
     require_once __DIR__ . "/../Views/base.php";
 }
 
+elseif ($uri === "/ModifProgram") {
+    if (isset ($_POST["btnEnvoiImcModif"])) {
+        ModifierCritereUser($pdo);
+        header('location:/index.php');
+    }
+    $template = "Views/Components/pageAccueil.php";
+    require_once __DIR__ . "/../Views/base.php";
+}
+
 elseif (str_contains($uri, "/pageAccueil.php")) {
     if (isset($_SESSION['utilisateur'])) {
         selectLeCritereprUser($pdo);

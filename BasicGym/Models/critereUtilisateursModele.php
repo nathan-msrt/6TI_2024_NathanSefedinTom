@@ -57,23 +57,40 @@ function DeleteCritereUser($pdo)
 // modifier le critere User
 function ModifierCritereUser($pdo){
 
-    selectLeCritereprUser($pdo);
-    // Récupérer les valeurs du formulaire
-    $poids = $_SESSION["critereutilisateur"]->critereUtilisateurPoid;
-    $taille = $_SESSION["critereutilisateur"]->critereUtilisateurTaille;
-        
-    
-    $imc = $poids / ($taille/100 * $taille/100);
-
     try {
-        $query = "SET SQL_SAFE_UPDATES = 0; UPDATE critereUtilisateur SET critereUtilisateurImc = :critereUtilisateurImc WHERE utilisateurId = :utilisateurId; SET SQL_SAFE_UPDATES = 1;";
-        $ajouteUser = $pdo->prepare($query);
-        $ajouteUser->execute([
-            'critereUtilisateurImc'=> $imc,
-            'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
+        // Désactivation de SQL_SAFE_UPDATES pour permettre la mise à jour
+        $pdo->exec("SET SQL_SAFE_UPDATES = 0;");
+    
+        // Préparation de la requête de mise à jour
+        $query = "UPDATE critereutilisateur 
+                  SET critereUtilisateurPoid = :critereUtilisateurPoid, 
+                      critereUtilisateurTaille = :critereUtilisateurTaille, 
+                      critereUtilisateurAge = :critereUtilisateurAge, 
+                      critereUtilisateurSexe = :critereUtilisateurSexe, 
+                      critereUtilisateurMaterielMusculation = :critereUtilisateurMaterielMusculation, 
+                      critereUtilisateurNiveau = :critereUtilisateurNiveau, 
+                      critereUtilistaeurNbJour = :critereUtilistaeurNbJour 
+                  WHERE utilisateurId = :utilisateurId";
+        
+        $updateUser = $pdo->prepare($query);
+        
+        // Exécution de la requête avec les paramètres
+        $updateUser->execute([
+            'critereUtilisateurPoid' => $_POST['poid'],
+            'critereUtilisateurTaille' => $_POST['taille'],
+            'critereUtilisateurAge' => $_POST['age'],
+            'critereUtilisateurSexe' => $_POST['sexe'] == "male" ? 1 : 0,
+            'critereUtilisateurMaterielMusculation' => $_POST['musculation'] == "oui" ? 1 : 0,
+            'utilisateurId' => $_SESSION['utilisateur']->utilisateurId,
+            'critereUtilisateurNiveau' => $_POST['niveau'],
+            'critereUtilistaeurNbJour' => $_POST['jour']
         ]);
+        
+        // Réactivation de SQL_SAFE_UPDATES
+        $pdo->exec("SET SQL_SAFE_UPDATES = 1;");
+        
     } catch (PDOException $e) {
-        $message = $e->getMessage();
-        die($message);
+        die($e->getMessage());
     }
+    
 }

@@ -3,7 +3,7 @@
     <div>
         <form method="post" action="" class="flex formCreate">
             <fieldset>
-                <legend>Créer votre Programme</legend>
+                <legend><?php if(isset($_SESSION['critereutilisateur'])) : ?>Modifier votre programme<?php else : ?>Créer votre Programme<?php endif ?></legend>
                         
                 <label for="sexe">Sexe:</label>
                 <select id="sexe" name="sexe" required>
@@ -44,7 +44,7 @@
                     <option value="non" <?php if(isset($_SESSION["critereutilisateur"]) && $_SESSION["critereutilisateur"]->critereUtilisateurMaterielMusculation == 'non') echo 'selected'; ?>>non</option>
                 </select>
                 <div>
-                    <button name="btnEnvoiImc" type="submit" value="envoyer">Calculer l'IMC</button>
+                <?php if(isset($_SESSION['critereutilisateur'])) : ?><button name="btnEnvoiImcModif" type="submit" value="envoyer">Modifier l'IMC</button><?php else : ?><button name="btnEnvoiImc" type="submit" value="envoyer">Calculer l'IMC</button><?php endif ?>
                 </div>
             </fieldset>
         </form>
