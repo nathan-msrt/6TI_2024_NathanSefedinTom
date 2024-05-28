@@ -1,7 +1,7 @@
 <?php
 
-require_once "Models/userModel.php";
-require_once "Models/critereUtilisateursModele.php";
+require_once __DIR__ . "/../Models/critereUtilisateursModele.php";
+require_once __DIR__ . "/../Models/userModel.php";
 
 
 $uri = $_SERVER["REQUEST_URI"];
@@ -9,16 +9,22 @@ $uri = $_SERVER["REQUEST_URI"];
 if($uri == "/connexion"){
     if (isset ($_POST["btnEnvoiConnect"])) {
         connectUser($pdo);  
+        header('location:/index.php');
     }
     $template = "Views/Users/connexion.php";
-    require_once  "Views/base.php"; 
+    require_once __DIR__ . "/../Views/base.php"; 
 }elseif ($uri == "/insciptionOrEditProfile") {
     $messageErrorLogin = verifData();
-        if (!($messageErrorLogin)) {
-            createUser($pdo);
+    if (!($messageErrorLogin)) {
+        $userId = CreateUser($pdo); // Crée l'utilisateur et récupère son ID
+
+        if ($userId) {
+            connectUser($pdo); // Connecte automatiquement l'utilisateur
+            header('location:/connexion');
         }
+    }   
     $template = "Views/Users/insciptionOrEditProfile.php";
-    require_once  "Views/base.php";
+    require_once __DIR__ . "/../Views/base.php";
 }elseif ($uri === "/deleteProfil") {
     DeleteCritereUser($pdo);
     deleteUser($pdo);
@@ -34,7 +40,7 @@ if($uri == "/connexion"){
     require_once  "Views/base.php"; 
 }elseif ($uri === "/compte") {
     $template = "Views/Users/compte.php";
-    require_once  "Views/base.php";
+    require_once __DIR__ . "/../Views/base.php";
 }
 
 

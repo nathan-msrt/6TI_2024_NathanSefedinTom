@@ -12,6 +12,9 @@ function CreateUser($pdo)
                 'utilisateurMotDePasse'=>$_POST ['Login'],
             ]);
         }
+
+        // retourne le dernié utilisateur créé
+        return $pdo->lastInsertId();
     } catch (PDOException $e) {
         die($e -> getMessage());
     }
@@ -28,7 +31,7 @@ function connectUser($pdo){
         $utilisateur=$chercheUser -> fetch();
         if ($utilisateur) {
             $_SESSION['utilisateur']=$utilisateur;
-        }//else pour dirre qu'on a pas de pseudo ou mot de passe valide
+        }//else pour dire qu'on a pas de pseudo ou mot de passe valide
     } catch (PDOException $e) {
         $message = $e->getMessage();
         die($message);
@@ -36,15 +39,40 @@ function connectUser($pdo){
 }
 
 
-function DeleteUser($pdo)
-{
+function DeleteUser($pdo) {
     try {
-        $query = "delete from utilisateur where utilisateurId =:utilisateurId";
+        $utilisateurId = $_SESSION["utilisateur"]->utilisateurId;
+
+        // Commencer une transaction
+        $pdo->beginTransaction();
+
+        // Supprimer les enregistrements dans la table ProgrammeSportif_utilisateur
+        $query = "DELETE FROM ProgrammeSportif_utilisateur WHERE utilisateurId = :utilisateurId";
+        $deleteProgrammeUser = $pdo->prepare($query);
+        $deleteProgrammeUser->execute([
+            'utilisateurId' => $utilisateurId
+        ]);
+
+        // Supprimer les critères utilisateur associés
+        $query = "DELETE FROM critereUtilisateur WHERE critereUtilisateurId = (SELECT critereUtilisateurId FROM utilisateur WHERE utilisateurId = :utilisateurId)";
+        $deleteCritereUtilisateur = $pdo->prepare($query);
+        $deleteCritereUtilisateur->execute([
+            'utilisateurId' => $utilisateurId
+        ]);
+
+        // Supprimer l'utilisateur
+        $query = "DELETE FROM utilisateur WHERE utilisateurId = :utilisateurId";
         $deleteUser = $pdo->prepare($query);
         $deleteUser->execute([
-            'utilisateurId' => $_SESSION["utilisateur"] ->utilisateurId
+            'utilisateurId' => $utilisateurId
         ]);
+
+        // Commit de la transaction
+        $pdo->commit();
+
     } catch (PDOException $e) {
+        // Rollback en cas d'erreur
+        $pdo->rollBack();
         $message = $e->getMessage();
         die($message);
     }

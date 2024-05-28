@@ -14,7 +14,7 @@
                     <input type="Email" placeholder="Email" class="form-control" id="Email" name="Email" value="<?php if(isset($_SESSION["utilisateur"])) : ?><?= $_SESSION["utilisateur"]->utilisateurEmail ?><?php endif ?>"> 
                 </div>
                 <div>
-                    <label for="Login" class="form-label">Login</label>
+                    <label for="Login" class="form-label">Mot de Passe</label>
                     <input type="Login" placeholder="Login" class="form-control" id="Login" name="Login" value="<?php if(isset($_SESSION["utilisateur"])) : ?><?= $_SESSION["utilisateur"]->utilisateurMotDePasse ?><?php endif ?>">
                 </div>
                 <div>

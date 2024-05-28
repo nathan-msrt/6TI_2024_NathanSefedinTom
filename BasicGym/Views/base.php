@@ -10,15 +10,15 @@
 <body>
 
     <header> 
-        <?php require_once "Views/Components/navBar.php"; ?>
+        <?php require_once __DIR__ . "/Components/navBar.php"; ?>
     </header>
     <main>
         <?php
-            require_once $template;
+            require_once __DIR__ . "/../" . $template;
         ?>
     </main>
     <flooter>
-        <?php require_once "Views/Components/footer.php"; ?>
+        <?php require_once __DIR__ . "/Components/footer.php"; ?>
     </flooter>
 
     
