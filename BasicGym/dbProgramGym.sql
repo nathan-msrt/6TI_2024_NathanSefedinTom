@@ -39,7 +39,6 @@ CREATE TABLE programmeCardio
 CREATE TABLE programmeSportif
 (
     programmeSportifId INT auto_increment NOT NULL,
-    programmeSportifNom VARCHAR(255),
     programmePoidDeCorpId int,
     programmeMusculationId int,
     programmeCardioId int,
@@ -55,7 +54,12 @@ CREATE TABLE critereUtilisateur
     critereUtilisateurTaille int,
     critereUtilisateurAge int,
     critereUtilisateurNutrition bool,
-    critereUtilisateurSexe bool
+    critereUtilisateurSexe bool,
+    critereUtilisateurImc int,
+    critereUtilisateurMaterielMusculation bool,
+    critereUtilisateurNiveau VARCHAR(50),
+    utilisateurId int REFERENCES utilisateur(utilisateurId),
+    critereUtilistaeurNbJour int
 );
 CREATE TABLE Utilisateur
 (
@@ -74,6 +78,7 @@ CREATE TABLE ProgrammeSportif_utilisateur
     programmeSportif_utilisateurId INT auto_increment NOT NULL,
     utilisateurId int,
     programmeSportifId int,
+    niveauDifficulte INT DEFAULT 1,
 	PRIMARY KEY (programmeSportif_utilisateurId),
     FOREIGN KEY (utilisateurId) REFERENCES utilisateur(utilisateurId),
     FOREIGN KEY (programmeSportifId) REFERENCES programmesportif(programmeSportifId)
@@ -83,7 +88,7 @@ DELIMITER $$
 CREATE PROCEDURE InsertData()
 BEGIN
   DECLARE i INT DEFAULT 1;
-  WHILE i <= 1000 DO
+  WHILE i <= 200 DO
     INSERT INTO programmePoidDeCorp (corpPompe, corpTraction, corpSquat, corpAbdos, nbReps, nbSeries)
     VALUES (CONCAT('Pompes classiques ', i), CONCAT('Tractions supination ', i), CONCAT('Squats classiques ', i), CONCAT('Crunchs ', i), i, i);
 
@@ -95,7 +100,7 @@ BEGIN
 
     INSERT INTO programmeSportif (programmeSportifNom, programmePoidDeCorpId, programmeMusculationId, programmeCardioId)
     VALUES (CONCAT('Programme débutant ', i), i, i, i);
-
+	
     INSERT INTO critereUtilisateur (critereUtilisateurPoid, critereUtilisateurTaille, critereUtilisateurAge, critereUtilisateurNutrition, critereUtilisateurSexe)
     VALUES (50 + FLOOR(RAND() * 50), 150 + FLOOR(RAND() * 50), 18 + FLOOR(RAND() * 50), ROUND(RAND()), ROUND(RAND()));
 
@@ -111,3 +116,4 @@ END$$
 DELIMITER ;
 
 CALL InsertData();
+

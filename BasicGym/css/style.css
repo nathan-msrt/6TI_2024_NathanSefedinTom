@@ -1,27 +1,335 @@
-.menu{
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
+.navBar{
+    height: 200px;
+    width: 100% ;
+    position: sticky;
+    top: 10px;
+    background: transparent;
+    backdrop-filter: blur(10px);
 }
-
-a{
-    text-decoration: none;
-    color: black;
+.footer{
+    width: 100%;
+    height: 35px;
+    font-weight: bold;
+    font-size: 15px;
 }
-
-.formCreate {
-    justify-content: space-evenly;
-    height: 400px;
+main{
+    height: 800px;
+}
+body{
     padding: auto;
     margin: auto;
 }
 
+.a:link, .a:visited{
+    transition : opacity 0.5s ease;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    margin: 25px 0px 25px 0px;
+    background-color: #7ea367;
+    height: 30px;
+    width: 250px ;
+    padding-top: 2px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform :uppercase ;
+    align-items: center;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.a:hover,.a:active{
+    background-color: #579730;
+}
+.a2{
+    transition : opacity 0.5s ease;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    background-color: #7ea367;
+    margin: 50px;
+    padding: 5px;
+    height: 100px;
+    width: 250px ;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform :uppercase ;
+    align-items: center;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 25px;
+}
+.a3{
+    transition : opacity 0.5s ease;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    background-color: #7ea367;
+    margin: 50px;
+    padding: 5px;
+    height: 100px;
+    width: 250px ;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform :uppercase ;
+    align-items: center;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divGaucheIntro{
+    width: 50%;
+    height: 1000px;
+    background-color: white;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divLoginIntro{
+    display: block;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.divLoginIntro input{
+    width: 360px;
+    height: 38px;
+    
+}
+.divInscription{
+    width: 30%;
+    height: 65%;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.imgTitre{
+    flex-wrap: wrap;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    position: relative;
+    top: 15%;
+}
+.divCompte  {
+    width:650px;
+    height: 450px;;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 12px;
+    margin-top: 150px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divCritere{
+    width:462px;
+    height:500px;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divProgramme{
+    width: 747px;
+    height:500px;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divCreerProgram{
+    width:462px;
+    height: 750px;;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 15px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divAvisIntro{
+    width: 50%;
+}
+.divAvis{
+    width:462px;
+    height:500px;
+    margin: auto;
+    background-color:white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.divAvis h1{
+    font-size: 30px;
+    padding-top: 25px;
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.imgLogo{
+    top: 10%;
+    width: 250px;
+    align-items: center;
+    padding-top: 10px;
+}
+.imgFondIntro{
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.divImgFond{
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+.divImgFond2{
+    background-color: #579730;
+    min-height: 100%;
+    min-width: 1024px;
+}
+.divImgFond3{
+    background-color: #579730;
+    background-repeat: no-repeat;
+    height: 950px;
+}
+.input{
+    border-radius: 50px;
+    width: 200px;
+    height: 400px;
+    margin-top: 12px;
+    padding-left: 10px;
+}
+.linkLogin{
+    list-style-type: none;
+    background-color: white;
+    color: black;
+}
+.form{
+    width: 462px;
+    height: 500px;
+    overflow: hidden;
+}
+.fieldsetIMC{
+    border: none;
+    padding: 10px;
+    flex-flow: column;
+    display: flex;
+}
+.fieldsetInscription{
+    border: none;
+    padding: 10px;
+    flex-flow: column;
+    display: flex;
+}
+.fieldsetAvis{
+    display: flex;
+    border: none;
+    
+}
+fieldset div{
+  flex-flow: column;
+  margin: 20px;
+}
+legend{
+    font-size: x-large;
+}
+fieldset input{
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 5px;
+}
+.formCreate {
+    justify-content: space-evenly;
+    height: 400px;
+    padding: 50px;
+    margin: auto;
+    border-width: 0px;
+    font-size: large;
+}
 .formCreate input{
     justify-content: space-evenly;
     height: 25px;
     padding: 0px;
     margin: 0px;
 }
+.formCreate button{
+    background: #7ea367;
+  opacity: 0.6;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  text-transform :uppercase ;
+  color:white;
+  cursor: pointer;
+  outline :none;
+  border-radius: 50px;
+  border: none;
+  padding :0;
+  margin-top :20px;
+  transition : opacity 0.5s ease;
+  
+}
+.button:hover,.button:active{
+    background-color: #579730;
+}
+.buttonLogin{
+    background: #579730;
+  opacity: 0.6;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  text-transform :uppercase ;
+  color:white;
+  cursor: pointer;
+  outline :none;
+  border-radius: 50px;
+  border: none;
+  padding :0;
+  margin-top :20px;
+  transition : opacity 0.5s ease;
+}
+.buttonAvis{
+  background: #579730;
+  opacity: 0.6;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  text-transform :uppercase ;
+  color:white;
+  cursor: pointer;
+  outline :none;
+  border-radius: 50px;
+  border: none;
+  padding :0;
+  transition : opacity 0.5s ease;
+}
+.legendAvis{
+    text-transform :uppercase ;
+    font-size: large;
+    font-style: bold;
+}
+.legendInscription{
+    text-align: center;
+    font-size: 15px;
+}
+
 
 .etoile{
     width: 25px;

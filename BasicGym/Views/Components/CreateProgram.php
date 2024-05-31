@@ -1,8 +1,9 @@
-<link rel="stylesheet" href="css/style.css">
-<div class="flex1">
-    <div>
-        <form method="post" action="" class="flex formCreate">
-            <fieldset>
+
+<div class="divImgFond flex1">
+<div class="flex1 ">
+    <div class="divCreerProgram">
+    <form method="post" action="" class="flex formCreate">
+            <fieldset class="fieldsetInscription legendInscription">
                 <legend><?php if(isset($_SESSION['critereutilisateur'])) : ?>Modifier votre programme<?php else : ?>Créer votre Programme<?php endif ?></legend>
                         
                 <label for="sexe">Sexe:</label>
@@ -49,4 +50,5 @@
             </fieldset>
         </form>
     </div>
+</div>
 </div>

@@ -34,10 +34,13 @@ if($uri == "/connexion"){
     session_destroy();
     header('location:/connexion');
 }elseif ($uri === "/modifyProfil") {
-    updateUser($pdo);
-    reloadSession($pdo); //windows R
+    if (isset ($_POST["btnEnvoi"])) {
+        updateUser($pdo);
+        reloadSession($pdo); //windows R
+        header('location:/compte');
+    }
     $template = "Views/Users/insciptionOrEditProfile.php";
-    require_once  "Views/base.php"; 
+    require_once __DIR__ . "/../Views/base.php"; 
 }elseif ($uri === "/compte") {
     $template = "Views/Users/compte.php";
     require_once __DIR__ . "/../Views/base.php";

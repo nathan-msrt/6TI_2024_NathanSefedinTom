@@ -1,5 +1,10 @@
-        <form method="post" action="">
-            <fieldset>
+        
+
+
+ <div class="flex5 divImgFond3">
+    <div class="divInscription flex6">
+    <form method="post" action=""  class="formCreate">
+            <fieldset class="fieldsetInscription legendInscription">
                 <legend><?php if(isset($_SESSION["utilisateur"])) : ?>Modifier<?php else : ?>Inscription<?php endif ?></legend>
                 <div>
                     <label for="Nom" class="form-label">Nom</label>
@@ -18,7 +23,9 @@
                     <input type="Login" placeholder="Login" class="form-control" id="Login" name="Login" value="<?php if(isset($_SESSION["utilisateur"])) : ?><?= $_SESSION["utilisateur"]->utilisateurMotDePasse ?><?php endif ?>">
                 </div>
                 <div>
-                    <button name="btnEnvoi" type="submit" value="Envoyer"><?php if(isset($_SESSION["utilisateur"])) : ?>Modifier<?php else : ?>Envoyer<?php endif ?></button>
+                    <button  class="buttonInscription"  name="btnEnvoi" type="submit" value="Envoyer"><?php if(isset($_SESSION["utilisateur"])) : ?>Modifier<?php else : ?>Envoyer<?php endif ?></button>
                 </div>
             </fieldset>
         </form>
+    </div>
+</div>

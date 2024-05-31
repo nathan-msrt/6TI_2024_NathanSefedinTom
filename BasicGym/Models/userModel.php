@@ -81,8 +81,7 @@ function DeleteUser($pdo) {
 function UpdateUser($pdo)
 {
     try {
-        if (isset ($_POST["btnEnvoi"])) {
-            $query = "update utilisateur set utilisateurNom=:utilisateurNom , utilisateurPrenom=:utilisateurPrenom, utilisateurEmail=:utilisateurEmail,  utilisateurMotDePasse=:utilisateurMotDePasse where utilisateurId=:utilisateurId";
+            $query = "UPDATE utilisateur SET utilisateurNom=:utilisateurNom , utilisateurPrenom=:utilisateurPrenom, utilisateurEmail=:utilisateurEmail,  utilisateurMotDePasse=:utilisateurMotDePasse where utilisateurId=:utilisateurId";
             $ajouteUser = $pdo->prepare($query);
             $ajouteUser->execute([
                 'utilisateurNom'=> $_POST ['Nom'],
@@ -91,7 +90,6 @@ function UpdateUser($pdo)
                 'utilisateurEmail'=>$_POST ['Email'],
                 'utilisateurId'=>$_SESSION['utilisateur']->utilisateurId
             ]);
-        }
     } catch (PDOException $e) {
         die($e -> getMessage());
     }
@@ -106,7 +104,7 @@ function reloadSession($pdo)
         ]);
         $user=$chercheUser -> fetch();
         if ($user) {
-            $_SESSION['utilisateur']->utilisateurId;
+            $_SESSION['utilisateur']=$user;
         }
     } catch (PDOException $e) {
         $message = $e->getMessage();
