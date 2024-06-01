@@ -10,7 +10,9 @@ if ($uri === "/CreateProgram") {
     if (isset ($_POST["btnEnvoiImc"])) {
         RecupValeurBdd($pdo);
         selectLeCritereprUser($pdo);
-        header('location:/index.php');
+        header('location:/OurProgram');
+        echo '<script>window.location.href = "/OurProgram";</script>';
+        exit(); // Ajoutez exit() après l'appel à echo
     }
     $template = "Views/Components/pageAccueil.php";
     require_once __DIR__ . "/../Views/base.php";
@@ -20,6 +22,8 @@ elseif ($uri === "/ModifProgram") {
     if (isset ($_POST["btnEnvoiImcModif"])) {
         ModifierCritereUser($pdo);
         header('location:/OurProgram.php');
+        echo '<script>window.location.href = "/OurProgram";</script>';
+        exit(); 
     }
     $template = "Views/Components/pageAccueil.php";
     require_once __DIR__ . "/../Views/base.php";

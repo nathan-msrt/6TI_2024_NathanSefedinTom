@@ -1,10 +1,7 @@
-        
-
-
- <div class="flex5 divImgFond3">
+<div class="flex5 divImgFond3">
     <div class="divInscription flex6">
     <form method="post" action=""  class="formCreate">
-            <fieldset class="fieldsetInscription legendInscription">
+            <fieldset class="fieldsetInscription legendInscription rondConteneur">
                 <legend><?php if(isset($_SESSION["utilisateur"])) : ?>Modifier<?php else : ?>Inscription<?php endif ?></legend>
                 <div>
                     <label for="Nom" class="form-label">Nom</label>

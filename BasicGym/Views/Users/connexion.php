@@ -1,10 +1,7 @@
-
-
-
 <div class="flex5 divImgFond3">
     <div class="divInscription flex6">
     <form method="post" action="" class="flex formCreate">
-        <fieldset class="fieldsetInscription legendInscription">
+        <fieldset class="fieldsetInscription legendInscription rondConteneur">
             <legend>Se connecter</legend>
             <div>
                 <label for="Email" class="form-label">Email</label>

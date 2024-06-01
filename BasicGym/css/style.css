@@ -476,3 +476,13 @@ ol {
     list-style-type: none;
 }
 
+fieldset {
+    border: none;
+}
+
+.rondConteneur {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0;
+    border: white;
+}
