@@ -1,0 +1,488 @@
+/* Styles pour la section des informations utilisateur */
+.info-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.info-section h1, .info-section h2, .info-section h3, .info-section h4 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.info-list p {
+    margin: 0 0 15px;
+    padding: 5px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #7ea367;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #6a9253;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navBar {
+    height: 200px;
+    width: 100%;
+    position: sticky;
+    top: 10px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.footer {
+    width: 100%;
+    height: 35px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+main {
+    min-height: 100%; /* Changez height en min-height pour qu'il prenne la hauteur restante */
+}
+
+.a:link, .a:visited {
+    transition: opacity 0.5s ease;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    margin: 25px 0px 25px 0px;
+    background-color: #7ea367;
+    height: 30px;
+    width: 250px;
+    padding-top: 2px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.a:hover, .a:active {
+    background-color: #579730;
+}
+
+.a2 {
+    transition: opacity 0.5s ease;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    background-color: #7ea367;
+    margin: 50px;
+    padding: 5px;
+    height: 100px;
+    width: 250px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 25px;
+}
+
+.a3 {
+    display: inline-block;
+    text-align: center;
+    background-color: #7ea367;
+    margin: 20px auto;
+    padding: 10px 20px;
+    height: auto;
+    width: auto;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.a3:hover {
+    background-color: #6a9253;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.divGaucheIntro {
+    width: 50%;
+    height: 1000px;
+    background-color: white;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divLoginIntro {
+    display: block;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.divLoginIntro input {
+    width: 360px;
+    height: 38px;
+}
+
+.divInscription {
+    width: 30%;
+    height: 65%;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.imgTitre {
+    flex-wrap: wrap;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    position: relative;
+    top: 15%;
+}
+
+.divCompte {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 150px;
+    text-align: center;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divCritere {
+    width: 462px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divProgramme {
+    width: 747px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divCreerProgram {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.divAvisIntro {
+    width: 50%;
+}
+
+.divAvis {
+    width: 462px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.divAvis h1 {
+    font-size: 30px;
+    padding-top: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.imgLogo {
+    top: 10%;
+    width: 250px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.imgFondIntro {
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.divImgFond {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+
+.divImgFond2 {
+    background-color: #579730;
+    min-height: 100%;
+    min-width: 1024px;
+}
+
+.divImgFond3 {
+    background-color: #579730;
+    background-repeat: no-repeat;
+    height: 950px;
+}
+
+.input {
+    border-radius: 50px;
+    width: 200px;
+    height: 400px;
+    margin-top: 12px;
+    padding-left: 10px;
+}
+
+.linkLogin {
+    list-style-type: none;
+    background-color: white;
+    color: black;
+}
+
+.form {
+    width: 462px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.fieldsetIMC {
+    border: none;
+    padding: 10px;
+    flex-flow: column;
+    display: flex;
+}
+
+.fieldsetInscription {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    width: 100%;
+}
+
+.fieldsetAvis {
+    display: flex;
+    border: none;
+}
+
+fieldset div {
+    flex-flow: column;
+    margin: 20px;
+}
+
+legend {
+    font-size: x-large;
+}
+
+fieldset input {
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 5px;
+}
+
+.formCreate label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.formCreate input,
+.formCreate select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.formCreate button {
+    background: #7ea367;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formCreate button:hover {
+    background: #6a9253;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.buttonInscription {
+    background: #7ea367;
+    opacity: 0.6;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+
+.buttonInscription:hover {
+    opacity: 1;
+    background: #5e8d4a;
+}
+
+.button:hover, .button:active {
+    background-color: #579730;
+}
+
+.buttonLogin {
+    background: #579730;
+    opacity: 0.6;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+}
+
+.buttonAvis {
+    background: #579730;
+    opacity: 0.6;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    padding: 0;
+    transition: opacity 0.5s ease;
+}
+
+.legendAvis {
+    text-transform: uppercase;
+    font-size: large;
+    font-style: bold;
+}
+
+.legendInscription {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.etoile {
+    width: 25px;
+    height: 25px;
+}
+
+.form-label {
+    margin-right: 10px;
+}
+
+.espace {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.linkLogin {
+    color: #0d5a00;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.linkLogin:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+ol {
+    list-style-type: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.rondConteneur {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0;
+    border: white;
+}
