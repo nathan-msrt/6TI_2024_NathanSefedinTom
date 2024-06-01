@@ -1,4 +1,4 @@
-<div class="divImgFond ">
+<div class="divImgFond">
     <div class="flex space-around">
         <div class="divCompte">
             <h1>Votre page profil</h1>

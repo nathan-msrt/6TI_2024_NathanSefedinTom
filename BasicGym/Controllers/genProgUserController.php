@@ -9,6 +9,7 @@ if ($uri === "/CreateProgram") {
     if (isset ($_POST["btnEnvoiGen"])) {
         RecupValeurBdd($pdo);
         selectLeCritere($pdo);
+        
     }
     $template = "Views/Components/pageAccueil.php";
     require_once __DIR__ . "/../Views/base.php";

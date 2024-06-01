@@ -19,7 +19,7 @@ if ($uri === "/CreateProgram") {
 elseif ($uri === "/ModifProgram") {
     if (isset ($_POST["btnEnvoiImcModif"])) {
         ModifierCritereUser($pdo);
-        header('location:/OurProgram');
+        header('location:/OurProgram.php');
     }
     $template = "Views/Components/pageAccueil.php";
     require_once __DIR__ . "/../Views/base.php";
