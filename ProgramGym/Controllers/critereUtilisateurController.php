@@ -20,6 +20,13 @@ if ($uri === "/CreateProgram") {
 
 elseif ($uri === "/ModifProgram") {
     if (isset ($_POST["btnEnvoiImcModif"])) {
+        // SUPPRESSION DE L'ANCIEN PROGRAMME
+        $query = "DELETE FROM ProgrammeSportif_utilisateur WHERE utilisateurId = :utilisateurId";
+        $deleteProgrammeUser = $pdo->prepare($query);
+        $deleteProgrammeUser->execute([
+            'utilisateurId' => $_SESSION['utilisateur']->utilisateurId
+        ]);
+
         ModifierCritereUser($pdo);
         header('location:/OurProgram.php');
         echo '<script>window.location.href = "/OurProgram";</script>';

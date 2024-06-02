@@ -85,6 +85,13 @@ function ModifierCritereUser($pdo){
             'critereUtilisateurNiveau' => $_POST['niveau'],
             'critereUtilistaeurNbJour' => $_POST['jour']
         ]);
+
+        // Supprimer le programme actuel de l'utilisateur
+        $query = "DELETE FROM ProgrammeSportif_utilisateur WHERE utilisateurId = :utilisateurId";
+        $deleteProgrammeUser = $pdo->prepare($query);
+        $deleteProgrammeUser->execute([
+            'utilisateurId' => $utilisateurId
+        ]);
         
         // Réactivation de SQL_SAFE_UPDATES
         $pdo->exec("SET SQL_SAFE_UPDATES = 1;");

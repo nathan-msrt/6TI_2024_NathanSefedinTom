@@ -48,10 +48,8 @@
                 <div class="rating">
                     <div class="stars">
                         <div><img src="img/Union.png" alt=""></div>
-                        <p>Ce site propose des programmes de sport personnalisés, efficaces et motivants. En peu de temps par session, il permet d'atteindre rapidement vos objectifs de forme physique avec des conseils d'experts.</p>
+                        <h3>Ce site propose des programmes de sport personnalisés, efficaces et motivants. En peu de temps par session, il permet d'atteindre rapidement vos objectifs de forme physique avec des conseils d'experts.</h3>
                         <div><img src="img/Untitledstar.png" alt=""></div>
-                        <p>Ce site crée des programmes de sport sur mesure, motivants et adaptés à chacun. Les sessions sont courtes et efficaces, idéales pour atteindre rapidement vos objectifs de fitness.</p>
-                        <input type="text" name="truc" value="<?php echo $donnees['machin']; ?>" />
                     </div>
                    <!-- <div>
                         <form action="">

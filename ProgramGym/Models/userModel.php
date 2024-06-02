@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . "/../Models/selectProgramModel.php";
+
 function CreateUser($pdo)
 {
     try {
@@ -36,6 +38,7 @@ function connectUser($pdo){
         $message = $e->getMessage();
         die($message);
     }
+
 }
 
 
@@ -94,6 +97,7 @@ function UpdateUser($pdo)
         die($e -> getMessage());
     }
 }
+
 function reloadSession($pdo)
 {
     try {

@@ -9,7 +9,6 @@ if ($uri == "/")     {
     if(isset($_SESSION['utilisateur'])) {
         selectLeCritereprUser($pdo);
         ImcProg($pdo);   
-
     }   
     $template = "Views/pageAccueil.php";
     require_once __DIR__ . "/../Views/base.php";
