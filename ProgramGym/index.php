@@ -6,5 +6,6 @@
     require_once __DIR__ . "/Controllers/userController.php";
     require_once __DIR__ . "/Controllers/critereUtilisateurController.php";
     require_once __DIR__ . "/Controllers/genProgUserController.php";
+    require_once __DIR__ . "/Controllers/avisUtilisateurController.php";
 
 

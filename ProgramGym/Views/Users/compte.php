@@ -5,7 +5,7 @@
             <ol>
                 <div>
                     <li>Nom</li>
-                    <p><?= $_SESSION["utilisateur"]->utilisateurNom ?></p> <!--afficher une coordonnée dans la base de donnée-->
+                    <p><?= $_SESSION["utilisateur"]->utilisateurNom ?></p>
                 </div>
                 <div>
                     <li>Prénom</li>
@@ -21,22 +21,36 @@
                 </div>
             </ol>
            <div class="flex1">
-           <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
-                    <div>
-                        <h3 name="btnEnvoi" class="text-danger"><a  class="a3" href="/deleteProfil" class="btn btn-secondary" name="id">Supprimer </a></h3>
-                    </div>
-                <?php endif ?>
-                <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
-                    <div>
-                        <h3 name="btnEnvoi" class="text-danger"><a  class="a3" href="/Deconnexion" class="btn btn-secondary" name="id">Se deconnecter </a></h3>
-                    </div>
-                <?php endif ?>
-                <?php if(isset($_SESSION['utilisateur'])) : ?> <!--si l'utilisateur est connecte-->
-                    <div>
-                        <h3 name="btnEnvoi" class="text-danger"><a  class="a3" href="/modifyProfil">Modifier</a></h3>
-                    </div>
-                <?php endif ?>  
+               <?php if(isset($_SESSION['utilisateur'])) : ?>
+                   <div>
+                       <h3><a class="a3" href="/deleteProfil" class="btn btn-secondary">Supprimer</a></h3>
+                   </div>
+                   <div>
+                       <h3><a class="a3" href="/Deconnexion" class="btn btn-secondary">Se deconnecter</a></h3>
+                   </div>
+                   <div>
+                       <h3><a class="a3" href="/modifyProfil">Modifier</a></h3>
+                   </div>
+               <?php endif ?>
            </div>
         </div>
+    </div>
+    <div >
+        <h2 class="h2Avis">Laisser un avis</h2>
+        <form class="flex7" method="POST" action="/ajouterAvis">
+            <label for="note">Note:</label>
+            <select name="note" id="note">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="commentaire">Commentaire:</label>
+            <textarea name="commentaire" id="commentaire"></textarea>
+
+            <button type="submit" name="btnEnvoiAvis">Envoyer</button>
+        </form>
     </div>
 </div>

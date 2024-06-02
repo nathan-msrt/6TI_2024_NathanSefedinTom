@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../Models/selectProgramModel.php";
+require_once __DIR__ . "/../Models/avisUtilisateurModel.php";
 
 function CreateUser($pdo)
 {
@@ -56,8 +57,15 @@ function DeleteUser($pdo) {
             'utilisateurId' => $utilisateurId
         ]);
 
+        // Supprimer les avis associés
+        $query = "DELETE FROM avisGeneral WHERE utilisateurId = :utilisateurId";
+        $supprimerAvis = $pdo->prepare($query);
+        $supprimerAvis->execute([
+            'utilisateurId' => $utilisateurId
+        ]);
+
         // Supprimer les critères utilisateur associés
-        $query = "DELETE FROM critereUtilisateur WHERE critereUtilisateurId = (SELECT critereUtilisateurId FROM utilisateur WHERE utilisateurId = :utilisateurId)";
+        $query = "DELETE FROM critereUtilisateur WHERE critereUtilisateurId IN (SELECT critereUtilisateurId FROM utilisateur WHERE utilisateurId = :utilisateurId)";
         $deleteCritereUtilisateur = $pdo->prepare($query);
         $deleteCritereUtilisateur->execute([
             'utilisateurId' => $utilisateurId
@@ -80,6 +88,8 @@ function DeleteUser($pdo) {
         die($message);
     }
 }
+
+
 
 function UpdateUser($pdo)
 {
@@ -134,3 +144,4 @@ function selectUser($pdo)
         die($message);
     }
 }
+

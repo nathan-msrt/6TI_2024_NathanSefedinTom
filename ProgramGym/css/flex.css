@@ -37,3 +37,28 @@
 .space-around{
     justify-content: space-around;
 }
+
+Bien sûr, voici un exemple de CSS pour votre formulaire :
+
+CSS
+
+.flex7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.flex7 label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flex7 select, .flex7 textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+    

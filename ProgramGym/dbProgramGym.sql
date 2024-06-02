@@ -82,6 +82,15 @@ CREATE TABLE ProgrammeSportif_utilisateur
 	PRIMARY KEY (programmeSportif_utilisateurId),
     FOREIGN KEY (utilisateurId) REFERENCES utilisateur(utilisateurId),
     FOREIGN KEY (programmeSportifId) REFERENCES programmesportif(programmeSportifId)
+);
+
+CREATE TABLE avisGeneral (
+    avisId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    utilisateurId INT,
+    note INT CHECK (note >= 1 AND note <= 5),
+    commentaire TEXT,
+    dateAvis TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (utilisateurId) REFERENCES utilisateur(utilisateurId)
 )
 
 DELIMITER $$

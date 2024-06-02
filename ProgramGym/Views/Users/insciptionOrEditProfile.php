@@ -17,7 +17,7 @@
                 </div>
                 <div>
                     <label for="Login" class="form-label">Mot de Passe</label>
-                    <input type="Login" placeholder="Login" class="form-control" id="Login" name="Login" value="<?php if(isset($_SESSION["utilisateur"])) : ?><?= $_SESSION["utilisateur"]->utilisateurMotDePasse ?><?php endif ?>">
+                    <input type="Login" placeholder="Mot de passe" class="form-control" id="Login" name="Login" value="<?php if(isset($_SESSION["utilisateur"])) : ?><?= $_SESSION["utilisateur"]->utilisateurMotDePasse ?><?php endif ?>">
                 </div>
                 <div>
                     <button  class="buttonInscription"  name="btnEnvoi" type="submit" value="Envoyer"><?php if(isset($_SESSION["utilisateur"])) : ?>Modifier<?php else : ?>Envoyer<?php endif ?></button>
