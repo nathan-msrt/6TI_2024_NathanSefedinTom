@@ -49,21 +49,25 @@
                 <!-- Programme Poids de Corps Jour 1 -->
                 <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php else:?>
                     <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
                 
                 <!-- Ajouter d'autres exercices pour le jour 1 si nécessaire -->
@@ -71,23 +75,27 @@
             <div class="info-section">
                 <h3>Jour 2</h3>
                 <!-- Programme Musculation Jour 2 -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
                 <!-- Ajouter d'autres exercices pour le jour 2 si nécessaire -->
             </div>
@@ -98,43 +106,51 @@
                 <!-- Programme Poids de Corps Jour 1 -->
                 <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php else:?>
                     <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
                 <h3>Jour 2</h3>
                 <!-- Programme Musculation Jour 2 -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -158,44 +174,52 @@
                 <!-- Ajoutez le programme pour le jour 1 ici -->
                 <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php else:?>
                     <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
                 <h3>Jour 2</h3>
                 <!-- Programme Musculation Jour 2 -->
                 <!-- Ajoutez le programme pour le jour 2 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -216,23 +240,27 @@
                 <h3>Jour 4</h3>
                 <!-- Programme Musculation Jour 4 -->
                 <!-- Ajoutez le programme pour le jour 4 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
         <?php elseif ($nbJour == 5) : ?>
@@ -243,44 +271,52 @@
                 <!-- Ajoutez le programme pour le jour 1 ici -->
                 <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php else:?>
                     <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
                 <h3>Jour 2</h3>
                 <!-- Programme Musculation Jour 2 -->
                 <!-- Ajoutez le programme pour le jour 2 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -301,23 +337,27 @@
                 <h3>Jour 4</h3>
                 <!-- Programme Musculation Jour 4 -->
                 <!-- Ajoutez le programme pour le jour 4 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -342,44 +382,52 @@
                 <!-- Ajoutez le programme pour le jour 1 ici -->
                 <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php else:?>
                     <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
                 <h3>Jour 2</h3>
                 <!-- Programme Musculation Jour 2 -->
                 <!-- Ajoutez le programme pour le jour 2 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -400,23 +448,27 @@
                 <h3>Jour 4</h3>
                 <!-- Programme Musculation Jour 4 -->
                 <!-- Ajoutez le programme pour le jour 4 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="info-section">
@@ -437,23 +489,27 @@
                 <h3>Jour 6</h3>
                 <!-- Programme Musculation Jour 6 -->
                 <!-- Ajoutez le programme pour le jour 6 ici -->
-                <?php if (!empty($programmeUtilisateur['muscuBras']) || !empty($programmeUtilisateur['muscuJambes']) || !empty($programmeUtilisateur['muscuMollets']) || !empty($programmeUtilisateur['muscuDos']) || !empty($programmeUtilisateur['muscuPecs']) || !empty($programmeUtilisateur['muscuAbdos']) || !empty($programmeUtilisateur['muscuFessiers'])) : ?>
-                    <h4>Musculation</h4>
-                    <p>Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></p>
-                    <p>Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></p>
-                    <p>Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></p>
-                    <p>Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></p>
-                    <p>Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></p>
-                    <p>Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
-                <?php else :?>
+                <?php if (!empty($programmeUtilisateur['corpPompe']) || !empty($programmeUtilisateur['corpTraction']) || !empty($programmeUtilisateur['corpSquat']) || !empty($programmeUtilisateur['corpAbdos'])) : ?>
                     <h4>Poids de Corps</h4>
-                    <p>Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></p>
-                    <p>Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></p>
-                    <p>Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></p>
-                    <p>Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></p>
-                    <p>Nombre de Séries: <?= 3 ?></p>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=HDFjA-uYRug" target="_blank">Pompes: <?= $programmeUtilisateur['corpPompe'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=LG5VgIty4VU" target="_blank">Tractions: <?= $programmeUtilisateur['corpTraction'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=J_Zm4XvE__s&pp=ygUOdHV0b3JpYWwgc3F1YXQ%3D" target="_blank">Squats: <?= $programmeUtilisateur['corpSquat'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=wfxm7Sufd4Y&pp=ygUOdHV0b3JpYWwgYWJkb3M%3D" target="_blank">Abdos: <?= $programmeUtilisateur['corpAbdos'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
+                <?php else:?>
+                    <h4>Musculation</h4>
+                    <div class="a-exo">
+                        <a href="https://www.youtube.com/watch?v=yR9Wpyf8gbk&pp=ygUVdHV0b3JpYWwgY3VybCBoYWx0ZXJl" target="_blank">Bras: <?= $programmeUtilisateur['muscuBras'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=sfQKHQ2RWeo&pp=ygUZdHV0b3JpYWwgcHJlc3NlIMOgIGN1aXNzZQ%3D%3D" target="_blank">Jambes: <?= $programmeUtilisateur['muscuJambes'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=BeWXXo5jVMM&pp=ygUXdHV0b3JpYWwgbW9sbGV0IG1hY2hpbmU%3D" target="_blank">Mollets: <?= $programmeUtilisateur['muscuMollets'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=pcWVvjOLbBc&pp=ygUYdHV0b3JpYWwgdGlyYWdlIHBvaXRyaW5l" target="_blank">Dos: <?= $programmeUtilisateur['muscuDos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=SngodvMU0JA&pp=ygUYdHV0byBkw6l2ZWxvcHDDqSBjb3VjaMOp" target="_blank">Pectoraux: <?= $programmeUtilisateur['muscuPecs'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=MO2GT3UtQAM&pp=ygURdHV0byBhYmRvIG1hY2hpbmU%3D" target="_blank">Abdos: <?= $programmeUtilisateur['muscuAbdos'] ?? 'Non défini' ?></a>
+                        <a href="https://www.youtube.com/watch?v=o7NfUJJGT9U&pp=ygUUdHV0byBmZXNzaWVyIG1hY2hpbmU%3D" target="_blank">Fessiers: <?= $programmeUtilisateur['muscuFessiers'] ?? 'Non défini' ?></a>
+                        <a href="" target="_blank">Nombre de Séries: <?= 3 ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
         <?php endif; ?>

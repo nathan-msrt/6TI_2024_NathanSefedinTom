@@ -512,3 +512,8 @@ fieldset {
     text-align: center;
     margin-top: 40px;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
